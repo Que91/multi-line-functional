@@ -1,38 +1,401 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+
+/* :root {
+-- Marineblue = hsl(213, 96%, 18%);
+-- Purplishblue = hsl(243, 100%, 62%);
+-- Pastelblue = hsl(228, 100%, 84%);
+-- Lightblue = hsl(206, 94%, 87%);
+-- Strawberry red = hsl(354, 84%, 57%);
+
+
+
+-- Coolgray = hsl(231, 11%, 63%);
+-- Lightgray = hsl(229, 24%, 87%);
+-- Magnolia = hsl(217, 100%, 97%);
+-- Alabaster = hsl(231, 100%, 99%);
+-- White = hsl(0, 0%, 100%);
+} */
+
+
+
+.mainContainer {
+background-color:white;
+display: flex;
+margin: auto;
+margin-top: 80px;
+width: 1200px;
+height: 800px;
+border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebarNavContainer {
+  display: flex;
+  background-image: url('/src/images/bg-sidebar-desktop.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 374px;
+  height: 770px;
+  border-radius: 10px;
+  margin-left: 16px;
+  margin-top: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stepNumbers{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 70px;
+  gap: 57px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.stepOne {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px #eee solid;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stepTwo {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px #eee solid;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.stepThree {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px #eee solid;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.stepFour {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px #eee solid;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navbarSteps {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-top: 60px;
+  line-height: 1px;
+}
+
+.stepSubHead {
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-bottom: 35px;
+  
+}
+
+.stepHead  {
+  color: hsl(206, 94%, 87%);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 4px;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+.personalInfoLabel {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.personalInput {
+  padding: 15px;
+  border-radius: 5px;
+  width: 580px;
+}
+
+.allBtn {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 650px;
+  margin-left: 225px;
+
+}
+
+.nextBtn {
+  font-size: 18px;
+  padding: 20px;
+  width: 150px;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+  color: white;
+  background-color: #022959;
+  margin-left: 700px;
+  position: absolute;
+}
+
+.backBtn {
+position: absolute;
+margin-left: 250px;
+margin-top: 15px;
+font-size: 18px;
+cursor: pointer;
+width: 150px;
+border-style: none;
+background: none;
+}
+
+.monthlyOptions {
+  display: flex;
+  text-align: left;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+
+.arcade {
+  width: 160px;
+  height: 90px;
+  padding-top: 110px;
+  border-style: solid;
+  border-radius: 8px;
+  padding-left: 10px;
+  line-height: 10px;
+  cursor: pointer; 
+}
+
+.arcade:hover {
+  background-color: grey;
+}
+
+.advanced {
+  width: 160px;
+  height: 90px;
+  padding-top: 110px;
+  border-style: solid;
+  border-radius: 8px;
+  padding-left: 10px;
+  line-height: 10px;
+  cursor: pointer; 
+}
+
+.advanced:hover {
+  background-color: grey;
+}
+
+.pro {
+  width: 160px;
+  height: 90px;
+  padding-top: 110px;
+  border-style: solid;
+  border-radius: 8px;
+  padding-left: 10px;
+  line-height: 10px;
+  cursor: pointer; 
+}
+
+.pro:hover {
+  background-color: grey;
+}
+
+.yearlyOptions {
+  display: none;
+}
+
+.toggle {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+.monthly {
+  padding-right: 40px;
+}
+.togBtn{
+
+}
+.yearly {
+  padding-left: 40px;
+}
+
+.active {
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(228, 100%, 84%);
+  font-weight: bolder ;
+}
+
+.inActive {
+  display: none;
+}
+
+.addOnsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+.addOnOptions {
+  margin-top: 40px;
+}
+
+#AddOnDescription {
+line-height: 15px;
+}
+.selectedAddOn {
+  color: red;
+}
+
+.onlineService {
+  display: flex;
+  border-style: solid;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 80px;
+  width: 600px;
+}
+
+.oServiceCheck {
+  margin: 25px;
+  width: 20px;
+}
+
+.oServicePrice {
+  position: absolute;
+  margin-left: 440px;
+  margin-top: -50px;
+  color: blue;
+}
+
+.largerStorage {
+  display: flex;
+  border-style: solid;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 80px;
+  width: 600px;
+}
+
+.lStorageCheck {
+  margin: 25px;
+  width: 20px;
+}
+
+.lStoragePrice {
+  margin-left: 200px;
+  margin-top: 25px;
+  color: blue;
+}
+
+.customizableProfile {
+  display: flex;
+  border-style: solid;
+  border-radius: 8px;
+  height: 80px;
+  width: 600px;
+}
+
+.cProfileCheck {
+  margin: 25px;
+  width: 20px;
+}
+
+.cProfilePrice {
+  margin-left: 155px;
+  margin-top: 25px;
+  color: blue;
+}
+
+.finishingUpContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+.summaryContainer {
+  border-style: solid;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: lightgray;
+  height: 200px;
+}
+
+.planSelection {
+  padding-left: 20px;
+  position: absolute;
+  line-height: 30px;
+}
+
+.selectionPrice {
+  padding-left: 500px;
+  margin-top: 40px;
+  position: absolute;
+}
+
+.addOnsSelections {
+  padding-left: 20px;
+  position: absolute;
+  margin-top: 110px;
+  line-height: 30px;
+}
+
+.addOnPrices {
+  padding-left: 500px;
+  margin-top: 110px;
+  line-height: 30px;
+  position: absolute;
+}
+
+.selectionTotals {
+margin-top: 400px;
+margin-left: 30px;
+position: absolute;
+}
+
+.summaryTotal {
+margin-top: 390px;
+margin-left: 490px;
+position: absolute;
+font-size: 22px;
+}
+
+.planDisplay {
+  margin-left: 15px;
 }
